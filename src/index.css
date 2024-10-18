@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* commons */
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --soft-red-color: #ff5e57;
+  --white-color: #ffffff;
+  --light-coral-color: #ff6f61;
+  --bright-electric-blue: #1e00ff;
+  --animation-direction: 2.8s forwards; /* Default animation timing */
+}
+
+/* Global Styles */
+body {
+  background: linear-gradient(180deg, #000033 0%, #0d0458 100%);
+}
+

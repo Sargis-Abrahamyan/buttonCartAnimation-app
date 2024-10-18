@@ -1,0 +1,105 @@
+.app {
+  height: 100dvh;
+}
+
+.btn {
+  position: relative;
+  width: 15em;
+  height: 5em;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  border: 1px solid var(--soft-red-color);
+  color: var(--white-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.btn_icon {
+  position: absolute;
+}
+
+.btn-iconCart {
+  left: -20%;
+  display: none;
+}
+
+.btn-iconProduct {
+  top: -50%;
+  display: none;
+}
+
+.btn-text {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.btn-text-first {
+  color: #ff6f61;
+}
+
+.btn-success-icon {
+  opacity: 0;
+  display: none;
+}
+
+.btn.active .btn-text-first {
+  animation: first-textAnimation var(--animation-direction);
+  display: none;
+}
+
+.btn.active .btn-success-icon {
+  animation: successAnimation var(--animation-direction);
+  display: block;
+}
+
+.btn.active .btn-iconCart {
+  animation: cartAnimation var(--animation-direction);
+  display: block;
+}
+
+.btn.active .btn-iconProduct {
+  animation: productAnimation var(--animation-direction);
+  display: block;
+}
+
+@keyframes first-textAnimation {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes successAnimation {
+  30%,60%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cartAnimation {
+  30%,
+  60% {
+    left: 44%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes productAnimation {
+  90%,
+  100% {
+    top: 35%;
+    opacity: 0;
+    display: none;
+  }
+}
